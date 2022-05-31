@@ -37,8 +37,8 @@ class Bola {
        this.y += this.velY;
     }
  
-    collisionDetect() {
-       for (const bola of Bola) {
+    collisionDetect(Bolas) {
+       for (const bola of Bolas) {
           if (!(this === bola)) {
              const dx = this.x - bola.x;
              const dy = this.y - bola.y;

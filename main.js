@@ -45,7 +45,7 @@ function loop() {
    for (const bola of bolas) {
     bola.draw();
     bola.update();
-    bola.collisionDetect();
+    bola.collisionDetect(bolas);
    }
 
    requestAnimationFrame(loop);
