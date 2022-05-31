@@ -20,11 +20,11 @@ function randomRGB() {
 
 
 
-const balls = [];
+const bolas = [];
 
-while (balls.length < 25) {
+while (bolas.length < 25) {
    const size = random(10,20);
-   const ball = new Ball(
+   const bola = new Bola(
       // ball position always drawn at least one ball width
       // away from the edge of the canvas, to avoid drawing errors
       random(0 + size,width - size),
@@ -35,14 +35,14 @@ while (balls.length < 25) {
       size
    );
 
-  balls.push(ball);
+  bolas.push(ball);
 }
 
 function loop() {
    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
    ctx.fillRect(0, 0,  width, height);
 
-   for (const ball of balls) {
+   for (const bola of bolas) {
      ball.draw();
      ball.update();
      ball.collisionDetect();

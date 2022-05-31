@@ -1,4 +1,4 @@
-class Bolas {
+class Bola {
 
     constructor(x, y, velX, velY, color, size) {
        this.x = x;
@@ -38,13 +38,13 @@ class Bolas {
     }
  
     collisionDetect() {
-       for (const ball of balls) {
-          if (!(this === ball)) {
-             const dx = this.x - ball.x;
-             const dy = this.y - ball.y;
+       for (const bola of Bola) {
+          if (!(this === bola)) {
+             const dx = this.x - bola.x;
+             const dy = this.y - bola.y;
              const distance = Math.sqrt(dx * dx + dy * dy);
  
-             if (distance < this.size + ball.size) {
+             if (distance < this.size + bola.size) {
                ball.color = this.color = randomRGB();
              }
           }
