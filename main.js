@@ -25,8 +25,8 @@ const bolas = [];
 while (bolas.length < 25) {
    const size = random(10,20);
    const bola = new Bola(
-      // ball position always drawn at least one ball width
-      // away from the edge of the canvas, to avoid drawing errors
+      // posição de sempre uma bola de distância
+      // fora das bordas para evitar erros de desenho
       random(0 + size,width - size),
       random(0 + size,height - size),
       random(-7,7),
@@ -35,7 +35,7 @@ while (bolas.length < 25) {
       size
    );
 
-  bolas.push(ball);
+  bolas.push(bola);
 }
 
 function loop() {
@@ -43,9 +43,9 @@ function loop() {
    ctx.fillRect(0, 0,  width, height);
 
    for (const bola of bolas) {
-     ball.draw();
-     ball.update();
-     ball.collisionDetect();
+    bola.draw();
+    bola.update();
+    bola.collisionDetect();
    }
 
    requestAnimationFrame(loop);
