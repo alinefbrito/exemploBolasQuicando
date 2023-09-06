@@ -5,13 +5,14 @@ const ctx = canvas.getContext('2d');
 
 const width = canvas.width = window.innerWidth -5;
 const height = canvas.height = window.innerHeight -5;
-
+console.log(width);
+console.log(height);
 // gera um número aleatório
 
 function random(min, max) {
     rdn = Math.random() * (max - min + 1);
     var r = Math.floor( rdn ) + min;
-    console.log(r);
+    //console.log(r);
   return r;
 }
 
